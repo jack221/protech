@@ -1,0 +1,5 @@
+*
+!.gitignore
+!public_html/
+public_html/wp-config.php
+!home5/
