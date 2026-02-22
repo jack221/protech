@@ -1,0 +1,52 @@
+# ProTech Robots.txt - Balanced AI Crawlers Policy
+# Updated: Jan 23, 2026
+
+# Cloudflare Content-Signal (Keep original)
+User-agent: *
+Content-Signal: search=yes,ai-train=no
+Allow: /
+
+# Block Amazon (No direct benefit)
+User-agent: Amazonbot
+Disallow: /
+
+# Block Apple Extended (Siri training not relevant)
+User-agent: Applebot-Extended
+Disallow: /
+
+# Block ByteDance/TikTok (No clear value)
+User-agent: Bytespider
+Disallow: /
+
+# Block Common Crawl (Commercial data harvesting)
+User-agent: CCBot
+Disallow: /
+
+# Block Meta AI (Facebook training)
+User-agent: meta-externalagent
+Disallow: /
+
+# ALLOW Claude (Respects copyright + cites sources)
+User-agent: ClaudeBot
+Allow: /
+
+# ALLOW Google Extended (May help Gemini visibility)
+User-agent: Google-Extended
+Allow: /
+
+# ALLOW ChatGPT (Now includes citations)
+User-agent: GPTBot
+Allow: /
+
+# Standard WordPress restrictions
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/themes/
+Allow: /wp-content/uploads/
+
+# Sitemap location
+Sitemap: https://protech.software/sitemap_index.xml

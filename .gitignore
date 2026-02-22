@@ -1,5 +1,17 @@
-*
+/*
+
 !.gitignore
-!public_html/
-public_html/wp-config.php
-!home5/
+
+# public_html: ملفات الجذر فقط
+!/public_html/
+!/public_html/*
+public_html/*/
+
+# ===== home5: السماح فقط بـ custom-api =====
+
+# تجاهل كل شيء تحت home5
+home5/**
+
+# السماح فقط بمجلد custom-api الحقيقي وما تحته
+!home5/protechs/home/protechs/support.protech.software/custom-api/
+!home5/protechs/home/protechs/support.protech.software/custom-api/**
